@@ -1,5 +1,7 @@
 import React from 'react'
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native'
+
+import NotoSansMedium from '../../../CustomComponents/NotoSansMedium'
 
 import Product from './Product'
 
@@ -16,7 +18,6 @@ const Products = () => {
           borderRadius: 10
         }}
       ></View>
-      {/* make this scrollview */}
         <View style={styles.products}>
           <ScrollView>
             <Product />
@@ -26,7 +27,7 @@ const Products = () => {
           </ScrollView>
         </View>
         <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.buttonText}>Add all to cart</Text>
+          <NotoSansMedium style={styles.buttonText}>Add all to cart</NotoSansMedium>
         </TouchableOpacity>
     </View>
   )
@@ -47,17 +48,18 @@ const styles = StyleSheet.create({
     },
     addButton: {
       position: 'absolute',
-      bottom: 20,
+      bottom: 50,
       width: '95%',
       backgroundColor: '#015DD3',
       justifyContent: 'center',
       alignItems: 'center',
-      paddingVertical: 18,
+      paddingVertical: 12,
       borderRadius: 10
     },
     buttonText: {
       color: "#fff",
-      fontSize: 18
+      fontSize: 16,
+      fontFamily: 'NotoSans-Medium'
     }
 })
 

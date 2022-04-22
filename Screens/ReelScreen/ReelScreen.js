@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, ImageBackground, View, Text } from 'react-native'
+import { StyleSheet, ImageBackground, View } from 'react-native'
 
 import Header from './Header/Header'
 import Products from './Products/Products'
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     height: '100%',
     justifyContent: 'space-between',
-    paddingTop: 24,
+    paddingTop: 15,
   },
 })
 

@@ -1,5 +1,9 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
+
+import DidactGothicRegular from '../../../CustomComponents/DidactGothicRegular'
+import NotoSansMedium from '../../../CustomComponents/NotoSansMedium'
+
 import LeftArrow from '../../../assets/icons/chevron_big_left.svg'
 import DownArrow from '../../../assets/icons/chevron_big_down.svg'
 
@@ -7,16 +11,16 @@ const Header = () => {
   return (
     <View style={styles.header}>
         <View>
-          <LeftArrow height={25} width={25} fill={"#2E3A59"} />
+          <LeftArrow height={30} width={30} fill={"#373737"} />
         </View>
 
-        <View style={{flexDirection:'row'}}>
+        <View style={{flexDirection:'row', marginLeft: 20, marginRight: 'auto'}}>
           <Image source={require("../../../assets/images/girl-glasses.jpg")} style={styles.profileImage} />
           <View>
-            <Text style={{fontSize: 18, color: "#fff"}}>Influencer's Name</Text>
+            <NotoSansMedium style={{fontSize: 20, color: "#fff"}}>Influencer's Name</NotoSansMedium>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={{color: "#fff"}}>Follow</Text>
-              <DownArrow height={18} width={18} fill={"#fff"} />
+              <DidactGothicRegular style={styles.followButton}>Follow</DidactGothicRegular>
+              <DownArrow height={16} width={16} fill={"#F2F7FD"} style={{marginTop: 5}} />
             </View>
           </View>
         </View>
@@ -35,18 +39,23 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: 'center',
-        paddingHorizontal: 24
+        paddingHorizontal: 15
     },
     profileImage: {
-      height: 50,
-      width: 50,
+      height: 55,
+      width: 55,
       borderRadius: 50,
       marginRight: 15
+    },
+    followButton: {
+      color: "#F2F7FD", 
+      fontSize: 16, 
+      marginRight: 8
     },
     menu: {
       height: 7,
       width: 7,
-      backgroundColor: '#bbb',
+      backgroundColor: '#B3BBC7',
       borderRadius: 5,
       marginBottom: 2
     }

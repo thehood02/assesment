@@ -1,5 +1,8 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
+
+import DidactGothicRegular from '../../../CustomComponents/DidactGothicRegular'
+import NotoSansMedium from '../../../CustomComponents/NotoSansMedium'
 
 import Tick from '../../../assets/icons/circle_check.svg'
 import Share from '../../../assets/icons/share.svg'
@@ -17,29 +20,30 @@ const Product = () => {
                     <View>
                         <View style={styles.brand}>
                             <Image source={require("../../../assets/images/girl.jpg")} style={styles.brandImage} />
-                            <Text>Brand Name</Text>
+                            <DidactGothicRegular style={styles.brandName}>Brand name</DidactGothicRegular>
                         </View>
-                        <Text>Product Name</Text>
+                        <NotoSansMedium style={styles.productName}>Product Name</NotoSansMedium>
                     </View>
                     <Tick height={30} width={30} fill={"#011E46"} />
                 </View>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <Text>Rs 3500</Text>
-                        <Text style={{color: "blue", marginLeft: 15}}>MP: 1500</Text>
+                        <DidactGothicRegular style={styles.price}>Rs 3500</DidactGothicRegular>
+                        <DidactGothicRegular style={styles.sellingPrice}>MP : Rs 1500</DidactGothicRegular>
                     </View>
-                    <View style={{flexDirection: "row", justifyContent:"space-between"}}>
-                        <Share height={20} width={20} fill={"#99A5B5"} />
+                    <View style={{flexDirection: "row"}}>
+                        <Share height={20} width={20} fill={"#99A5B5"} style={{marginRight: 10}} />
                         <Heart height={20} width={20} fill={"#99A5B5"} />
                     </View>
                 </View>
             </View>
         </View>
+        {/* border */}
         <View
             style={{
                 width: "85%",
-                height: 2,
-                backgroundColor: "#ccc",
+                height: 1,
+                backgroundColor: "#E6E8EC",
                 marginVertical: 15
             }}
         ></View>
@@ -63,10 +67,29 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
+    brandName: {
+        color:"#011E46", 
+        fontSize:16
+    },
     brandImage: {
         height: 30,
         width: 30,
         marginRight: 8,
+        borderRadius: 10
+    },
+    productName: 
+    {
+        color: "#677890", 
+        fontSize: 18
+    },
+    price: {
+        color:"#677890", 
+        fontSize: 16
+    },
+    sellingPrice: {
+        color: "#015DD3", 
+        marginLeft: 15, 
+        fontSize: 16
     }
 })
 
