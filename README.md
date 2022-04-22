@@ -1,4 +1,4 @@
-# assesment
+# assessment
 
 <!-- ![Complete Assesment Image](./assets/complete-image.png | width=100px) -->
 
