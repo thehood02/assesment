@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native'
 
 import Product from './Product'
 
@@ -18,9 +18,12 @@ const Products = () => {
       ></View>
       {/* make this scrollview */}
         <View style={styles.products}>
-          <Product />
-          <Product />
-          <Product />
+          <ScrollView>
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+          </ScrollView>
         </View>
         <TouchableOpacity style={styles.addButton}>
           <Text style={styles.buttonText}>Add all to cart</Text>
@@ -34,7 +37,6 @@ const styles = StyleSheet.create({
         height: "50%",
         width: "100%",
         backgroundColor: "#fff",
-        justifyContent: 'space-between',
         alignItems: "center",
         paddingHorizontal: 27,
         paddingVertical: 35
@@ -42,7 +44,6 @@ const styles = StyleSheet.create({
     products: {
       height: "100%",
       width: "100%",
-      justifyContent: 'space-between'
     },
     addButton: {
       position: 'absolute',

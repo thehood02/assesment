@@ -7,34 +7,42 @@ import Heart from '../../../assets/icons/heart_outline.svg'
 
 const Product = () => {
   return (
-    <View style={styles.productContainer}>
-        <View>
-            <Image source={require("../../../assets/images/guy.jpg")} style={styles.productImage} />
-        </View>
-
-        <View style={{width:"65%"}}>
-            <View style={{marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between'}}>
-                <View>
-                    <View style={styles.brand}>
-                        <Image source={require("../../../assets/images/girl.jpg")} style={styles.brandImage} />
-                        <Text>Brand Name</Text>
+    <View style={{alignItems: 'center'}}>
+        <View style={styles.productContainer}>
+            <View>
+                <Image source={require("../../../assets/images/guy.jpg")} style={styles.productImage} />
+            </View>
+            <View style={{width:"65%"}}>
+                <View style={{marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between'}}>
+                    <View>
+                        <View style={styles.brand}>
+                            <Image source={require("../../../assets/images/girl.jpg")} style={styles.brandImage} />
+                            <Text>Brand Name</Text>
+                        </View>
+                        <Text>Product Name</Text>
                     </View>
-                    <Text>Product Name</Text>
+                    <Tick height={30} width={30} fill={"#011E46"} />
                 </View>
-                <Tick height={30} width={30} fill={"#011E46"} />
-            </View>
-
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                    <Text>Rs 3500</Text>
-                    <Text style={{color: "blue", marginLeft: 15}}>MP: 1500</Text>
-                </View>
-                <View style={{flexDirection: "row", justifyContent:"space-between"}}>
-                    <Share height={20} width={20} fill={"#99A5B5"} />
-                    <Heart height={20} width={20} fill={"#99A5B5"} />
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                        <Text>Rs 3500</Text>
+                        <Text style={{color: "blue", marginLeft: 15}}>MP: 1500</Text>
+                    </View>
+                    <View style={{flexDirection: "row", justifyContent:"space-between"}}>
+                        <Share height={20} width={20} fill={"#99A5B5"} />
+                        <Heart height={20} width={20} fill={"#99A5B5"} />
+                    </View>
                 </View>
             </View>
         </View>
+        <View
+            style={{
+                width: "85%",
+                height: 2,
+                backgroundColor: "#ccc",
+                marginVertical: 15
+            }}
+        ></View>
 
     </View>
   )
